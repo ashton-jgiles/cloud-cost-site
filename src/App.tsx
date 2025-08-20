@@ -16,7 +16,8 @@ const App: React.FC = () => {
           <main className='flex-1 p-6 overflow-auto'>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/test" element={<TestDashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/tests" element={<TestDashboard />} />
               <Route path="/about" element={<About />} />
               <Route path="/eula" element={<EULA />} />
             </Routes>

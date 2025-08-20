@@ -5,15 +5,15 @@ const Sidebar: React.FC = () => {
   const location = useLocation()
 
   const navigationItems = [
-    { name: 'Dashboard', path: '/', icon: AiOutlineDashboard },
-    { name: 'Test Dashboard', path: '/test', icon: AiOutlineExperiment },
+    { name: 'Dashboard', path: '/dashboard', icon: AiOutlineDashboard },
+    { name: 'Test Dashboard', path: '/tests', icon: AiOutlineExperiment },
     { name: 'About', path: '/about', icon: AiOutlineInfoCircle },
     { name: 'EULA', path: '/eula', icon: AiOutlineFileText },
   ]
 
   const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/'
+    if (path === '/dashboard') {
+      return location.pathname === '/' || location.pathname === '/dashboard'
     }
     return location.pathname.startsWith(path)
   }
