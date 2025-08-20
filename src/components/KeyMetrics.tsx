@@ -5,9 +5,9 @@ const KeyMetrics: React.FC = () => {
                 <span className="text-lg font-semibold text-gray-800">Key Metrics</span>
             </header>
             <main className='p-6 -my-10 bg-white shadow-sm'>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {/* Total Spend (MTD) */}
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border border-blue-200">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg border border-blue-200">
                         <div className="flex flex-col">
                             <div className="flex items-center justify-between mb-1">
                                 <p className="text-sm font-medium text-blue-600">Total Spend (MTD)</p>
@@ -17,12 +17,12 @@ const KeyMetrics: React.FC = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <p className="text-2xl font-bold text-blue-900">$12,430</p>
+                            <p className="text-xl font-bold text-blue-900">$12,430</p>
                         </div>
                     </div>
 
                     {/* Budget Usage */}
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg border border-green-200">
                         <div className="flex flex-col">
                             <div className="flex items-center justify-between mb-1">
                                 <p className="text-sm font-medium text-green-600">Budget Usage</p>
@@ -32,13 +32,13 @@ const KeyMetrics: React.FC = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <p className="text-2xl font-bold text-green-900">83%</p>
+                            <p className="text-xl font-bold text-green-900">83%</p>
                             <p className="text-sm text-green-700">of $15,000</p>
                         </div>
                     </div>
 
                     {/* Forecasted Spend (EOM) */}
-                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg border border-purple-200">
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg border border-purple-200">
                         <div className="flex flex-col">
                             <div className="flex items-center justify-between mb-1">
                                 <p className="text-sm font-medium text-purple-600">Forecasted Spend (EOM)</p>
@@ -48,12 +48,12 @@ const KeyMetrics: React.FC = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <p className="text-2xl font-bold text-purple-900">$14,800</p>
+                            <p className="text-xl font-bold text-purple-900">$14,800</p>
                         </div>
                     </div>
 
                     {/* Month-over-Month Change */}
-                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg border border-orange-200">
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-lg border border-orange-200">
                         <div className="flex flex-col">
                             <div className="flex items-center justify-between mb-1">
                                 <p className="text-sm font-medium text-orange-600">Month-over-Month Change</p>
@@ -63,7 +63,7 @@ const KeyMetrics: React.FC = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <p className="text-2xl font-bold text-orange-900">+12%</p>
+                            <p className="text-xl font-bold text-orange-900">+12%</p>
                         </div>
                     </div>
                 </div>
