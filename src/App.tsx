@@ -1,25 +1,29 @@
-import Header from './components/Header'
-import KeyMetrics from './components/KeyMetrics'
-import Insights from './components/Insights'
-import Breakdowns from './components/Breakdowns'
-import { AiOutlineCloudSync } from 'react-icons/ai'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Dashboard from "./pages/Dashboard"
+import TestDashboard from "./pages/TestDashboard"
+import About from "./pages/About"
+import EULA from "./pages/EULA"
+import Sidebar from "./components/layout/Sidebar"
+import Header from "./components/layout/Header"
 
 const App: React.FC = () => {
   return (
-   <div className='h-screen bg-gray-100'>
-    <Header />
-    <main className='p-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <KeyMetrics />
+    <Router>
+      <div className='h-screen bg-gray-100 flex flex-col'>
+        <Header />
+        <div className='flex flex-1 overflow-hidden'>
+          <Sidebar />
+          <main className='flex-1 p-6 overflow-auto'>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/test" element={<TestDashboard />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/eula" element={<EULA />} />
+            </Routes>
+          </main>
+        </div>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <Breakdowns />
-      </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        <Insights />
-      </div>
-    </main>
-   </div>
+    </Router>
   )
 }
 
