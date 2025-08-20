@@ -1,15 +1,23 @@
-import './App.css'
-import RefreshData from './components/RefreshData'
+import Header from './components/Header'
+import KeyMetrics from './components/KeyMetrics'
+import Insights from './components/Insights'
+import Breakdowns from './components/Breakdowns'
+import { AiOutlineCloudSync } from 'react-icons/ai'
 
 const App: React.FC = () => {
   return (
    <div className='h-screen bg-gray-100'>
-    <header className='flex justify-between items-center p-6 bg-white shadow-sm'>
-      <span className='text-4xl font-semibold text-gray-800'>Cloud Cost</span>
-      <RefreshData />
-    </header>
+    <Header />
     <main className='p-6'>
-      {/* Main content will go here */}
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <KeyMetrics />
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <Breakdowns />
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <Insights />
+      </div>
     </main>
    </div>
   )
