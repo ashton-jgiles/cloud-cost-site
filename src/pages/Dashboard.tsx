@@ -1,8 +1,18 @@
+import { useState, useEffect } from "react";
+import { getUsers } from "../api/CloudCostApi";
 import Breakdowns from "../components/Breakdowns"
 import Insights from "../components/Insights"
 import KeyMetrics from "../components/KeyMetrics"
+import type { User } from '../types/User';
 
 const Dashboard: React.FC = () => {
+    const [users, setUsers] = useState<User[]>([]);
+
+    useEffect(() => {
+    getUsers().then(setUsers);
+  }, []);
+
+    console.log(users);
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mb-16'>
