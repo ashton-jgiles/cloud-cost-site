@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import Dashboard from "./pages/Dashboard"
 import TestDashboard from "./pages/TestDashboard"
 import About from "./pages/About"
@@ -7,6 +8,13 @@ import Sidebar from "./components/layout/Sidebar"
 import Header from "./components/layout/Header"
 
 const App: React.FC = () => {
+  useEffect(() => {
+    console.log('App component mounted');
+    console.log('Current location:', window.location.href);
+  }, []);
+
+  console.log('App component rendering');
+
   return (
     <Router>
       <div className='h-screen bg-gray-100 flex flex-col'>
