@@ -8,9 +8,9 @@ const Dashboard: React.FC = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mb-16'>
                 <KeyMetrics />
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mb-16'>
                 <div className='bg-white p-6 rounded-lg shadow-sm'>
-                    <span>Charts</span>
+                    <span className="text-lg font-semibold text-gray-800">Charts</span>
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6'>
