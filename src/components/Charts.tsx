@@ -1,7 +1,8 @@
-import { GetServices } from "../api/CloudCost";
+import { GetProviders } from "../api/providers";
+import { GetServices } from "../api/services";
 
-const costs = await GetServices();
-console.log(costs);
+const providers = await GetProviders();
+const services = await GetServices();
 
 const Charts: React.FC = () => {
     return (
