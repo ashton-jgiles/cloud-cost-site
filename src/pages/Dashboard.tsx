@@ -1,6 +1,7 @@
 import Breakdowns from "../components/Breakdowns"
 import Insights from "../components/Insights"
 import KeyMetrics from "../components/KeyMetrics"
+import Charts from "../components/Charts"
 
 const Dashboard: React.FC = () => {
     return (
@@ -9,16 +10,13 @@ const Dashboard: React.FC = () => {
                 <KeyMetrics />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 mb-16'>
-                <div className='bg-white p-6 rounded-lg shadow-sm'>
-                    <span className="text-lg font-semibold text-gray-800">Charts</span>
-                </div>
+                <Charts />
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-16'>
                 <Breakdowns />
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <Insights />
             </div>
+
         </div>
     )
 }
